@@ -2,7 +2,6 @@
 cd ~
 rm -rf ~/blocked.rsc
 rm -rf ~/all.txt
-rm -rf ~/all.txt*
 
 wget https://blacklist.3coresec.net/lists/all.txt
 
