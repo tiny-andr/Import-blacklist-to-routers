@@ -24,7 +24,7 @@ add action=drop chain=prerouting comment="block unsafe network traffic" src-addr
 add action=drop chain=prerouting comment="block unsafe network traffic" dst-address-list=blocked
 ```
 
-English：
+English
 
 In Linux environment, download the malicious IP list from blacklist.3coresec.net and import it into RouterOS
 
