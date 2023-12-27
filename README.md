@@ -6,20 +6,14 @@ linux环境下，从blacklist.3coresec.net下载恶意ip列表并导入到Router
 请将你的linux服务器的ssh公钥添加到routeros，确保linux能够ssh到routeros。
 
 使用方法：
-```
-git clone https://github.com/tiny-andr/Import-blacklist-to-routers.git
-
+```git clone https://github.com/tiny-andr/Import-blacklist-to-routers.git
 chmod +x ./Import-blacklist-to-routers/get_blockedlist_sendto_routeros
 ```
 修改脚本中的yourlinuxserver_ip和yourrouterosip为你的服务器ip和routerosip,以及用于执行导入脚本的账户名称，此处假设是routeros的admin账户
 
 编辑crontab,每晚22点传输地址表
-```
-cronteb -e
-```
-```
-00 22 * * * ~/Import-blacklist-to-routers/get_blockedlist_sendto_routeros
-```
+```cronteb -e```
+```00 22 * * * ~/Import-blacklist-to-routers/get_blockedlist_sendto_routeros```
 
 确保Routeros有防火墙规则调用此表：
 ```
