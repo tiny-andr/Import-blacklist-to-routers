@@ -6,11 +6,11 @@ rm -rf ~/all.txt*
 
 wget https://blacklist.3coresec.net/lists/all.txt
 
-# 在输出文件中添加首行
 echo "/ip/firewall/address-list" > ~/blocked.rsc
 echo "/ip firewall address-list remove [find list=blocked]" >> ~/blocked.rsc
-# 逐行读取输入文件，并在每一行前添加 "add list=blocked address="
+
 while read -r ip; do
-  echo "add list=blocked address=$ip comment=\"genarate from a script on 10.10.0.21\"" >> ~/blocked.rsc
+  echo "add list=blocked address=$ip comment=\"genarate from a script on yourLinuxserverip\"" >> ~/blocked.rsc
 done < ~/all.txt
-scp ./blocked.rsc root@10.10.0.254:/
+scp ./blocked.rsc root@yourRouterOSip:/
+ssh admin@yourRouterOSip '/import file-name=blocked.rsc'
