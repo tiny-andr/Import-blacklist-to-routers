@@ -26,7 +26,7 @@ add action=drop chain=prerouting comment="block unsafe network traffic" dst-addr
 
 English：
 
-In Linux environment, download the malicious IP list from blacklist.3coresec.net and import it into RouterOS /n/n/n/n
+In Linux environment, download the malicious IP list from blacklist.3coresec.net and import it into RouterOS
 
 Usage:
 
