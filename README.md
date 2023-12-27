@@ -20,7 +20,8 @@ cronteb -e
 
 
 确保Routeros有防火墙规则调用此表：
-
+```
 /ip firewall raw
 add action=drop chain=prerouting comment="block unsafe network traffic" src-address-list=blocked
 add action=drop chain=prerouting comment="block unsafe network traffic" dst-address-list=blocked
+```
