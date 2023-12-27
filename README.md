@@ -11,7 +11,7 @@ chmod +x ./Import-blacklist-to-routers/get_blockedlist_sendto_routeros
 ```
 修改脚本中的yourlinuxserver_ip和yourrouterosip为你的服务器ip和routerosip,以及用于执行导入脚本的账户名称，此处假设是routeros的admin账户
 
-编辑crontab,每晚22点传输地址表
+编辑crontab,每晚22点传输地址表并导入
 
 ```cronteb -e```
 
@@ -36,7 +36,7 @@ chmod +x ./Import-blacklist-to-routers/get_blockedlist_sendto_routeros
 
 Modify yourlinuxserver_ip and yourrouterosip in the script get_blockedlist_sendto_routeros to your server ip and routerosip, and the account name used to execute the import script. It is assumed here that it is the admin account of routers.
 
-Edit crontab and transfer the address table at 22:00 every night
+Edit crontab, transfer the address table at 22:00 every night and import it
 
 ```cronteb -e```
 
