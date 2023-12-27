@@ -10,6 +10,8 @@ git clone https://github.com/tiny-andr/Import-blacklist-to-routers.git
 
 chmod +x ./Import-blacklist-to-routers/get_blockedlist_sendto_routeros
 
+修改脚本中的linuxserver_ip和routeros_ip为你的服务器ip和routerosip
+
 编辑crontab,每晚22点传输地址表
 
 cronteb -e
